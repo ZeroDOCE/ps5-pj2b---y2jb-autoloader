@@ -14,6 +14,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -29,6 +30,8 @@ jobs:
         run: |
           VERSION=$(make print-version BUILD_TYPE=dev)
           echo "version=${VERSION}" >> $GITHUB_OUTPUT
+          LAST_STABLE_TAG=$(git tag --sort=-creatordate | grep -v "\-dev\-" | grep -v "^${VERSION}$" | head -n 1)
+          echo "last_stable_tag=${LAST_STABLE_TAG}" >> $GITHUB_OUTPUT
 
       - name: Create Dev Release
         uses: softprops/action-gh-release@v2
@@ -38,11 +41,18 @@ jobs:
           name: ${{ steps.get_version.outputs.version }}
           prerelease: true
           body: |
-            **Notice:** This is an automated development build. It may not be fully tested.
+            - ### Changelog:
 
-            **Bundled Binaries:**
+            **Full Changelog (since last stable release)**: https://github.com/itsPLK/ps5_y2jb_autoloader/compare/${{ steps.get_version.outputs.last_stable_tag }}...${{ steps.get_version.outputs.version }}
+
+            ---
+            <details>
+            <summary>Bundled Binaries</summary>
+
             This build integrates the following external dependency versions:
             - [itsPLK/ps5-elfldr](https://github.com/itsPLK/ps5-elfldr): [${{ steps.build_package.outputs.elfldr_ver }}](https://github.com/itsPLK/ps5-elfldr/releases/tag/${{ steps.build_package.outputs.elfldr_ver }})
             - [itsPLK/ps5-kexp](https://github.com/itsPLK/ps5-kexp): [${{ steps.build_package.outputs.kexp_ver }}](https://github.com/itsPLK/ps5-kexp/releases/tag/${{ steps.build_package.outputs.kexp_ver }})
             - [itsPLK/ps5-payload-manager](https://github.com/itsPLK/ps5-payload-manager): [${{ steps.build_package.outputs.pldmgr_ver }}](https://github.com/itsPLK/ps5-payload-manager/releases/tag/${{ steps.build_package.outputs.pldmgr_ver }})
+
+            </details>
           files: 'y2jb_update.zip'
