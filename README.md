@@ -15,9 +15,11 @@
 
 <p align="center">
  <img src="./y2jb_screenshot.png" width="600" />
- <a href="https://youtu.be/NU59UlNzbBM">Youtube Video</a>
 </p>
 
+<p align="center">
+ <a href="https://youtu.be/NU59UlNzbBM">Youtube Video</a>
+</p>
 
 ## How to Use
 
