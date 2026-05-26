@@ -5,7 +5,7 @@
 <h3 align="center">Fork of <a href="https://github.com/itsPLK/ps5-y2jb-autoloader">ps5-y2jb-autoloader</a></h3>
 <h3 align="center">Fork of <a href="https://github.com/Gezine/Y2JB">Y2JB</a></h3>
 &nbsp;
-<p align="center">Automatically loads the kernel exploit, elf_loader, your elf payloads, and .js scripts.<br>Supports PS5 firmwares 4.03-10.01</p>
+<p align="center">Automatically loads the kernel exploit, elf_loader, your elf payloads, and .js scripts.<br>Tested PS5 firmwares 12.40</p>
 
 <p align="center">
     <b>Other Autoloaders:</b><br>
