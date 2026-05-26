@@ -1,7 +1,8 @@
 <p align="center">
  <img src="./src/icon0.png" width="128" />
 </p>
-<h1 align="center">PS5 Y2JB Autoloader</h1>
+<h1 align="center">PS5 P2JB - Y2JB Autoloader</h1>
+<h3 align="center">Fork of <a href="https://github.com/itsPLK/ps5-y2jb-autoloader">ps5-y2jb-autoloader</a></h3>
 <h3 align="center">Fork of <a href="https://github.com/Gezine/Y2JB">Y2JB</a></h3>
 &nbsp;
 <p align="center">Automatically loads the kernel exploit, elf_loader, your elf payloads, and .js scripts.<br>Supports PS5 firmwares 4.03-10.01</p>
@@ -29,10 +30,6 @@
   - Root of a USB drive
   - Internal drive: `/data/ps5_autoloader`
   - The YT's splash_screen folder: `download0/cache/splash_screen/aHR0cHM6Ly93d3cueW91dHViZS5jb20vdHY=/ps5_autoloader`
-
-## How to Update
-
-Since version **v0.2**, you can update the autoloader by simply placing **`y2jb_update.zip`** (from the [Releases page](https://github.com/itsPLK/ps5_y2jb_autoloader/releases)) on the **root** of a USB drive, and starting the app.
 
 ## Setup Instructions
 
