@@ -46,9 +46,7 @@ Installation is the same as the original [Y2JB](https://github.com/Gezine/Y2JB/b
 ### Non-Jailbroken PS5
 You might find a system backup with pre-configured Autoloader (I don't distribute such backups).
 
-You can also restore [Y2JB](https://github.com/Gezine/Y2JB) (remote loader) system backup, and then:
-- install Autoloader over it by using [y2jb_updater](https://github.com/itsPLK/y2jb_updater)
-- or use FTP to place `download0.dat` from releases page in `/user/download/PPSA01650`
+Use FTP to place `download0.dat` from releases page in `/user/download/PPSA01650`
 - or install separate YT app from different region, and use FTP to place `download0.dat` from releases page in `/user/download/PPSA0165*`
 
 
